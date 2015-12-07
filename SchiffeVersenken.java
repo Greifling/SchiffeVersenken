@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * Diese Klasse soll das Spiel "Schiffe versenken" simulieren.
  * 
