@@ -101,8 +101,6 @@ public class SchiffeVersenken {
             }
             print(gegner); // neuen Zustand anzeigen
         }
-        scn1.close();
-        scn2.close();
         return;
     }
 
@@ -124,7 +122,6 @@ public class SchiffeVersenken {
             System.out.println("Verfehlt auf " + "Reihe: " + verteid[0] + " Spalte: " + verteid[1] + "\n");
         }
         print(spieler); // neuen Zustand anzeigen
-        scn.close();
         return;
     }
 
@@ -183,7 +180,6 @@ public class SchiffeVersenken {
                     break;
             }
         }
-        s.close();
         return;
     }
 }
