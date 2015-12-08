@@ -79,14 +79,16 @@ public class SchiffeVersenken {
         char in = scn1.nextLine().charAt(0);
         if (in == 'y') {
             gegner[angriff[0]][angriff[1]] = 'X';
-            System.out.println("Treffer registriert.\n");
+            System.out.println("Treffer registriert. Sie sind erneut am Zug.\n");
+            print(gegner);
+            attack();
         } else if (in == 'n') {
             gegner[angriff[0]][angriff[1]] = 'O';
             System.out.println("Fehlschuss registriert.\n");
+            print(gegner);
         } else {
             System.out.println("Keine gueltige Eingabe.");
         }
-        print(gegner);
         return;
     }
 
@@ -99,11 +101,14 @@ public class SchiffeVersenken {
         if (spieler[verteid[0]][verteid[1]] == '#') { // Schiff getroffen
             spieler[verteid[0]][verteid[1]] = 'X';
             System.out.println("Du wurdest getroffen auf " + "Reihe: " + verteid[0] + " Spalte: " + verteid[1] + "\n");
+            System.out.println("Du wirst erneut angegriffen.\n");
+            print(spieler);
+            defend();
         } else { // verfehlt
             spieler[verteid[0]][verteid[1]] = 'O';
             System.out.println("Verfehlt auf " + "Reihe: " + verteid[0] + " Spalte: " + verteid[1] + "\n");
+            print(spieler);
         }
-        print(spieler); // neuen Zustand anzeigen
         return;
     }
 
@@ -157,8 +162,7 @@ public class SchiffeVersenken {
         System.out.println("defend - Gegnerzug ausfuehren");
         System.out.println("help   - dieses Menue anzeigen");
         System.out.println("exit   - Spiel beenden");
-        System.out.println("_________________________________________________\n");
-        System.out.println("Positionen der Schiffe:\n");
+        System.out.println("_________________________________________________\n");   
         return;
     }
 
@@ -174,6 +178,7 @@ public class SchiffeVersenken {
         String eingabe;
         boolean run = true; // boolean fuer while Schleife
         printMenu();
+        System.out.println("Positionen der Schiffe:\n");
         print(spieler);
 
         while (run) {
