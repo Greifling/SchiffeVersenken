@@ -27,7 +27,7 @@ public class SchiffeVersenken {
     };
 
     /**
-     * An dieser stelle wird das Feld des Gegners deklariert. Da die Position
+     * An dieser Stelle wird das Feld des Gegners deklariert. Da die Position
      * der Schiffe nicht bekannt ist, wird fuer alle Felder Wasser ('.')
      * definiert.
      */
@@ -69,7 +69,7 @@ public class SchiffeVersenken {
     }
 
     /**
-     * Diese Methode fragt ab,welches Feld beschossen wird, und ob ein Treffer
+     * Diese Methode fragt ab, welches Feld beschossen wird, und ob ein Treffer
      * erzielt wurde.
      */
     public static void attack() {
@@ -93,8 +93,8 @@ public class SchiffeVersenken {
     }
 
     /**
-     * Diese Methode prueft nach Angabe des vom Gegner beschossen Feldes, ob
-     * damit ein Treffer erzielt wurde, und gibt dies aus.
+     * Diese Methode prueft nach Angabe des vom Gegner beschossenen Feldes, ob
+     * damit ein Treffer erzielt wurde, und gibt das Ergebnis aus.
      */
     public static void defend() {
         int[] verteid = input();
